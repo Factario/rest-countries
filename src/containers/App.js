@@ -28,8 +28,6 @@ class App extends Component {
         this.setState({ searchfield: event.target.value })
       }
 
-
-
     render() {
         const { countries, searchfield } = this.state;
         const filteredcountries = countries.filter(countries =>{
@@ -43,7 +41,7 @@ class App extends Component {
                 <li>
                 <button className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={() => alert("Button 1 clicked")}>Button 1</button>
                 <button className="ma3 ml4 br3 w-10 pa3 b--green bg-light-green" onClick={() => alert("Button 2 clicked")}>Button 2</button>
-                <select id='push' className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={this.onSearchChanges}>
+                <select id='push' className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={this.onRegionChange}>
                 <option value={null}>All</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">Americas</option>
