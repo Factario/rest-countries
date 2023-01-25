@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import CountryList from "../components/CountryList";
 import SearchBox from "../components/SearchBox";
@@ -27,9 +28,7 @@ class App extends Component {
         this.setState({ searchfield: event.target.value })
       }
 
-    selectChange = (event) => {
-        this.setState({ CountryFilter: event.target.value })
-      }
+
 
     render() {
         const { countries, searchfield } = this.state;
@@ -44,7 +43,7 @@ class App extends Component {
                 <li>
                 <button className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={() => alert("Button 1 clicked")}>Button 1</button>
                 <button className="ma3 ml4 br3 w-10 pa3 b--green bg-light-green" onClick={() => alert("Button 2 clicked")}>Button 2</button>
-                <select id='push' className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={this.selectChange}>
+                <select id='push' className="ma3 br3 w-10 pa3 b--green bg-light-green" onClick={this.onSearchChanges}>
                 <option value={null}>All</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">Americas</option>

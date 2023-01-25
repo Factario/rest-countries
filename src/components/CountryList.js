@@ -5,7 +5,7 @@ const CountryList = ({countries}) => {
     const cardComponent = countries.map((list, i) =>{
         return <Card key={i}
         name={countries[i].name}
-        region={countries[i].name}
+        region={countries[i].region}
         area={countries[i].area}/>
     })
     return(
